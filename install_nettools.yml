@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    - name: install nettools
+      apt:
+        name: iproute2
+        state: latest
+        update_cache: yes
+
